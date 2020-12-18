@@ -8,8 +8,17 @@
 
    id_ed25519 (creates 2 files one for public key & private key)
 6. Provide password for the key file(remember this password).
-7. Copy the id_ed25519.pub key to the github account.
+7. start the ssh-agent in the background
+	eval $(ssh-agent -s)
+	
+8. Adding the key to the ssh-add <file_name>.
+
+9. Copy the id_ed25519.pub key to the github account.
    Go to https://github.com/settings/keys add SSH Key.
-8. Set up is completed.
+10. Set up is completed.
 
 Can clone the projects using SSH option easily.
+
+To check whether the key added to the ssh or not using the 
+
+ssh-add -l
